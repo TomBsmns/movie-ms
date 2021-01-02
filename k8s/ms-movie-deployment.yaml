@@ -15,7 +15,7 @@ spec:
         app: movie-service
     spec:                     # Spec for the containers that will be run in the Pods
       containers:
-        - name: watchlist-service
+        - name: movie-service
           image: tombosmans/movie-service
           imagePullPolicy: Always
           ports:
@@ -44,7 +44,7 @@ spec:
 apiVersion: v1                      # API version
 kind: Service                       # Type of the kubernetes resource
 metadata:
- name: watchlist-service    # Name of the service
+ name: movie-service    # Name of the service
  labels:                           # Labels that will be applied to this service
    app: movie-service
 spec:
